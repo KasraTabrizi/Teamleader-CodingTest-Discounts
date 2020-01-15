@@ -7,6 +7,7 @@
     <title>Discount Orders</title>
 </head>
 <body>
-    
+    <div id="wrapper">
+    </div>
 </body>
 </html>

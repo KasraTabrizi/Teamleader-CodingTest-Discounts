@@ -18,10 +18,15 @@
 
         //METHODS
         //calculates the discount of the $order and returns the result. it uses all the other private functions to do so
-        public function calculcateDiscount($order){
+        public function calculcateDiscount($order, $customer){
+            $priceDiscount = 0;
+            //loop through each item of the order
             foreach($order->items as $item){
+                //check to which categorie the item belongs
+                $item->product-id;
                 
             }
+            //check if revenue is greater than 1000 euro
         }
         //function that gives X amount of a product for free according to how many of that product was ordered
         private function getFree($buyThreshold, $freeAmount){
