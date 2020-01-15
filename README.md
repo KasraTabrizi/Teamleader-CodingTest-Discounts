@@ -24,3 +24,15 @@ If you want to add a new type of discount method, you just add it in the Discoun
 
 In the above solution, every class is a different entity but it is perfectly feasible to make the Discount class **extend** the Order class because they are related to each other. 
 
+## Discount Class
+
+### Properties
+1. id
+2. 
+
+### Methods
+1. public function calculateDiscount($order)
+2. private function getOneFree($buyThreshold, $freeAmount)
+3. private function revenueDiscount($amount)
+4. private function normalDiscount($productAmount, $discount)
+
