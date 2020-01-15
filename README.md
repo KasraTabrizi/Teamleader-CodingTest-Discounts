@@ -22,4 +22,5 @@ The idea is to have different methods for each type of discount calculation and 
 contains info about the customer and the products it ordered).
 If you want to add a new type of discount method, you just add it in the Discount class. 
 
+In the above solution, every class is a different entity but it is perfectly feasible to make the Discount class **extend** the Order class because they are related to each other. 
 
