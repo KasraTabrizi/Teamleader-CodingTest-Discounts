@@ -37,12 +37,12 @@
 
     //FUNCTION THAT TAKES THE DATA AND GENERATES IN HTML TABLES 
     function generateDataToHTML($customers, $orders, $results){
-       echo '<div class"box">'; 
+       echo '<div class="box">'; 
        echo '<div class="customer-container">';
        echo  '<table>';
        foreach($customers as $key=>$value){
            echo '<tr>';
-           echo "<td>".$key."</td>";
+           echo "<td><b>".$key."</b></td>";
            echo "<td>".$value."</td>";
            echo '</tr>';
        }
@@ -56,7 +56,7 @@
                 foreach($orders->items as $item){
                     foreach($item as $key=>$value){
                         echo '<tr>';
-                        echo "<td>".$key."</td>";
+                        echo "<td><b>".$key."</b></td>";
                         echo "<td>".$value."</td>";
                         echo '</tr>';
                     }
@@ -64,7 +64,7 @@
             }
             else{
                 echo '<tr>';
-                echo "<td>".$key."</td>";
+                echo "<td><b>".$key."</b></td>";
                 echo "<td>".$value."</td>";
                 echo '</tr>';
             }
@@ -76,7 +76,7 @@
        echo  '<table>';
        foreach($results as $key=>$value){
             echo '<tr>';
-            echo "<td>".$key."</td>";
+            echo "<td><b>".$key."</b></td>";
             echo "<td>".$value."</td>";
             echo '</tr>';
        }
