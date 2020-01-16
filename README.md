@@ -61,7 +61,7 @@ In the model.php, all the json files are handles, objects are created and the fu
 4. private function normalDiscount($totalQuantity, $order, $cheapest) ===> CHECKS WHETHER THE CUSTOMER CAN HAVE A DISCOUNT ON THE CHEAPEST PRODUCT
 
 Note: I have called the fourth method "normalDiscount" instead of for example "discountOnCheapestProduct" because I was planning to add a fourth parameter
-that could decide whether it should calculate a discount on everything or on the cheapest product.
+that could decide whether it should calculate a discount on everything or on the cheapest product. (for the sake of making the function a little more flexible)
 
 Things I still need to do: Add a description as to why the customer deserves a specific type of discount. I have already created a discountReason in the discountStatus (see calculateDiscount function).
 
