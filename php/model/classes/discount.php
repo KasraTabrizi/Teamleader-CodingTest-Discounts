@@ -21,7 +21,7 @@
 
         //METHODS
         //function that gives a discount according to how many of a product in a certain category is ordered (Categorie 1)
-        private function normalDiscount($totalQuantity, $order, $cheapest){ //3,..,9.75
+        private function normalDiscount($totalQuantity, $order, $cheapest){ 
             $totalPrice = 0;
             if($totalQuantity >= $this->productAmount){
                 foreach($order->items as $item){
@@ -57,7 +57,7 @@
 
         //calculates the discount of the $order and returns the result. it uses all the other private functions to do so
         public function calculateDiscount($order, $customer){
-            $discountStatus = array("freeAmount" => 0, "totalPriceDiscount" => 0); 
+            $discountStatus = array("freeAmount" => 0, "totalPriceDiscount" => 0, "discountReason" => ""); 
             $cheapest = $order->items[0]['unit-price'];
             $totalQuantity = 0;
             //loop through each item of the order
