@@ -6,9 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Discount Orders</title>
 </head>
+
+<?php
+    require "../model/model.php";
+?>
+
 <body>
     <div id="wrapper">
-        
+
     </div>
 </body>
 </html>
