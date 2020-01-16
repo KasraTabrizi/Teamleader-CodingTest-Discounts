@@ -20,4 +20,13 @@
 
     
 
+
+    $discountObj = new Discount();
+
+
+    //FUNCTION THAT GENERATES TAKES THE DATA AND GENERATES THE HTML
+    function generateDataToHTML(){
+
+    }
+
 ?>
