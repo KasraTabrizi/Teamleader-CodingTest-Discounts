@@ -34,14 +34,14 @@
                     if($item->unit-price < $cheapest){
                         $cheapest = $item->unit-price;
                     }
-                    $totalQuantity += $item->total;
+                    $totalQuantity += $item->quantity;
                 } 
                 elseif(strpos($item->product-id, "B") !== false){ //Categorie 2
                     $priceDiscount = getFree($item->quantity);
                 }
             }
 
-            $priceDiscount = normalDiscount($totalQuantity, $order->items);
+            $priceDiscount = normalDiscount($totalQuantity, $order->items, $cheapest);
 
             //check if revenue is greater than the threshold
             $priceDiscount = revenueDiscount($customer->revenue, $order->total);
@@ -50,15 +50,22 @@
         }
 
         //function that gives a discount according to how many of a product in a certain category is ordered (Categorie 1)
-        private function normalDiscount($totalQuantity, $order){
-            if($totalQuantity >= $this-> $productAmount){
-                foreach($order->items as $items){
-                    
+        private function normalDiscount($totalQuantity, $order, $cheapest){
+            $totalPrice = 0;
+            if($totalQuantity >= $this->productAmount){
+                foreach($order->items as $item){
+                    if($item->unit-price === $cheapest){
+                        $totalPrice += $item->total * (1 - $this->normalDiscount);
+                    }
+                    else{
+                        $totalPrice += $item->total;
+                    }
                 }
             }
             else{
                 return $order->total;
             }
+            return $totalPrice;
         }
 
         //function that gives X amount of a product for free according to how many of that product was ordered (Categorie 2)
