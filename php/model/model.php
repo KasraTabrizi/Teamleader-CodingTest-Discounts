@@ -27,12 +27,17 @@
     $order2 = new Order($order2_decode['id'],$order2_decode['customer-id'],$order2_decode['items'],$order2_decode['total']);
     $order3 = new Order($order3_decode['id'],$order3_decode['customer-id'],$order3_decode['items'],$order3_decode['total']);
     
+    var_dump($customer3);
+    var_dump($order3);
     //CREATE DISCOUNT OBJECT
     $discountObj = new Discount();
+    //var_dump(strpos($order1->items[0]['unit-price'], "B"));
+    $result = $discountObj->calculateDiscount($order3, $customer3);
+    var_dump($result);
 
     //FUNCTION THAT GENERATES TAKES THE DATA AND GENERATES THE HTML
-    function generateDataToHTML(){
+    // function generateDataToHTML(){
 
-    }
+    // }
 
 ?>
